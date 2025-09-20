@@ -191,7 +191,6 @@ const businessPlatformData = [
       { id: 6, name: "Multi User & Role Management" },
       { id: 7, name: "Integrasi Payment Gateway ( Midtrans ) + notifikasi Penjualan (owner) & Pembelian (user)" },
       { id: 8, name: "4 Business Emails" },
-      { id: 9, name: "Integrasi CRM (Customer Relationship Management)" },
       { id: 10, name: "Integrasi API ( Ekspedisi )" },
       { id: 11, name: "Bonus 4 page Artikel" },
       { id: 12, name: "Advanced SEO + Schema Markup" },
@@ -288,7 +287,7 @@ const PriceList = () => {
 
             {/* Navigation Tabs */}
             <Tabs defaultValue="company-profile" className="w-full">
-              <TabsList className="grid w-full grid-cols-4 bg-[#111]">
+              <TabsList className="grid w-full gap-6 grid-cols-3 md:grid-cols-4 bg-[#111]">
                 <TabsTrigger
                   value="landing-page"
                   className="text-sm text-[#4f2cce]  font-semibold"
