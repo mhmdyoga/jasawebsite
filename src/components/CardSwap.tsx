@@ -99,13 +99,20 @@ const CardSwap: React.FC<CardSwapProps> = ({
           returnDelay: 0.2
         };
 
-  const childArr = useMemo(() => Children.toArray(children) as ReactElement<CardProps>[], [children]);
-  const refs = useMemo<CardRef[]>(() => childArr.map(() => React.createRef<HTMLDivElement>()), [childArr.length]);
+ const childArr = useMemo(
+  () => Children.toArray(children) as ReactElement<CardProps>[],
+  [children]
+);
+
+const refs = useMemo<React.RefObject<HTMLDivElement | null>[]>(
+  () => childArr.map(() => React.createRef<HTMLDivElement>()),
+  [childArr.length]
+);
 
   const order = useRef<number[]>(Array.from({ length: childArr.length }, (_, i) => i));
 
   const tlRef = useRef<gsap.core.Timeline | null>(null);
-  const intervalRef = useRef<number>();
+  const intervalRef = useRef<number>(0);
   const container = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
