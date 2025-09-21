@@ -262,7 +262,7 @@ const articleBlogData = [
 const PriceList = () => {
 
   const redirectToWhatsApp = (category: string, paket: string) => {
-  const phoneNumber = "6289669623289"; // ganti dengan nomor WA lo (format internasional tanpa +)
+  const phoneNumber = "6285135439654"; // ganti dengan nomor WA lo (format internasional tanpa +)
   const message = encodeURIComponent(
     `Halo, saya sepertinya tertarik dengan portofolio dan kinerja dari Jasawebsite.dev,saya tertarik dengan paket: ${category} dengan kategori: ${paket} bisa konsultasi untuk kebutuhan business saya ?`
   );

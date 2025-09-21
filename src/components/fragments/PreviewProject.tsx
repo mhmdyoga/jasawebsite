@@ -7,7 +7,7 @@ import { Button } from "../ui/button";
 const PreviewProject = () => {
 
   const redirectToWhatsApp = () => {
-  const phoneNumber = "6289669623289"; // ganti dengan nomor WA lo (format internasional tanpa +)
+  const phoneNumber = "6285135439654"; // ganti dengan nomor WA lo (format internasional tanpa +)
   const message = encodeURIComponent(
     "Halo, saya sepertinya tertarik dengan portofolio dan kinerja dari Jasawebsite.dev, bisa konsultasi untuk kebutuhan business saya ?"
   );
