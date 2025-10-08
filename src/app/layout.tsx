@@ -12,7 +12,7 @@ const Ramabadrha = Ramabhadra({
 })
 
 export const metadata: Metadata = {
-  title: "Jasawebsite.dev | Affordable Website Development Services",
+  title: "Codeverse Studio | Affordable Website Development Services",
   description: "Jasa pembuatan website: landing page, company profile, ecommerce. Cepat, SEO friendly, Murah, Terjangkau, responsive, dan modern.",
   icons: {
     icon: "/logo-jasawebsite.png",
