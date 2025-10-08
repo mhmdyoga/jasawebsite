@@ -54,7 +54,7 @@ const redirectToPortofolio = () => {
               <div className="glass-card rounded-full p-2">
                 <Code className="w-5 h-5 text-white" />
               </div>
-              <span className="text-sm text-muted-foreground">© 2025 Jasawebsite.dev, The Web Development Service #1 di indonesia.</span>
+              <span className="text-sm text-muted-foreground">© 2025 Codeverse Studio, The Web Development Service #1 di indonesia.</span>
             </div>
             <div className="flex gap-6 text-sm text-muted-foreground">
               <Link href="#" className="hover:text-primary transition-colors">

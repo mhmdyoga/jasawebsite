@@ -278,8 +278,8 @@ const PriceList = () => {
             <div className="text-center mb-4">
               <p className="text-white">
                 Tertarik dengan{" "}
-                <span className="text-[#4f2cce] text-xl font-semibold">
-                  Jasawebiste.dev
+                <span className="text-[#4f2cce] text-xl italic font-semibold">
+                  Codeverse Studio
                 </span> 
                 {" "} ?
               </p>
@@ -287,10 +287,10 @@ const PriceList = () => {
 
             {/* Navigation Tabs */}
             <Tabs defaultValue="company-profile" className="w-full">
-              <TabsList className="grid w-full gap-6 grid-cols-3 md:grid-cols-4 bg-[#111]">
+              <TabsList className="grid w-auto h-auto gap-6 grid-cols-2 md:grid-cols-4 bg-[#111]">
                 <TabsTrigger
                   value="landing-page"
-                  className="text-sm text-[#4f2cce]  font-semibold"
+                  className="text-sm text-[#4f2cce] w-auto h-auto p-2 font-semibold"
                 >
                   Landing Page
                 </TabsTrigger>

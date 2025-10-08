@@ -12,7 +12,7 @@ const CtaSection = () => {
     <div className="w-full h-auto flex flex-col-reverse md:flex-row-reverse text-[#f1f1f1] justify-between">
       <div className="md:p-8 p-2">
         <h2 className="text-[#f1f1f1] text-lg md:text-4xl font-bold text-start w-2xs md:w-2xl">
-          Kenapa sih harus <span className="underline underline-offset-4 decoration-[#4f2cce]">Jasawebsite.dev</span> ?? ini Benefits yang akan Client
+          Kenapa sih harus <span className="underline underline-offset-4 decoration-[#4f2cce] italic">Codeverse Studio</span> ?? ini Benefits yang akan Client
           terima:
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 mt-8">

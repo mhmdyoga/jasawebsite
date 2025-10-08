@@ -110,57 +110,68 @@ const redirectToPortofolio = () => {
           <h1 className="text-2xl ml-10 w-2xs md:w-4xl md:text-5xl text-center font-bold drop-shadow-lg">
             Jasa Pembuatan Website Profesional & User-Friendly
           </h1>
-          <div className="flex flex-row gap-4 justify-center items-center">
-            <button onClick={redirectToWhatsApp} className="mt-6 px-6 py-3 flex flex-row items-center justify-center gap-3 bg-white text-black rounded-xl shadow-md hover:bg-gray-200 transition">
-             <BsWhatsapp/> Free Consultasi
-            </button>
-            {/* glassmorphism button  */}
-            <div onClick={redirectToPortofolio} className="mt-6 px-6 py-3 bg-white/10 border border-white/20 text-white rounded-xl shadow-md hover:bg-white/20 transition cursor-pointer">
-              Cek Portofolio
-            </div>
+          <div className="flex flex-row gap-4 md:mt-8 mt-4 justify-center items-center">
+  {/* Tombol WhatsApp */}
+          <button
+            onClick={redirectToWhatsApp}
+            className="w-full sm:w-auto px-5 sm:px-6 py-3 flex flex-row items-center justify-center gap-2 sm:gap-3 bg-white text-black rounded-xl shadow-md hover:bg-gray-200 transition text-sm sm:text-base"
+          >
+            <BsWhatsapp className="text-lg sm:text-xl" />
+            Konsultasi
+          </button>
+
+          {/* Tombol Portofolio */}
+          <div
+            onClick={redirectToPortofolio}
+            className="w-full sm:w-auto px-5 sm:px-6 py-3 bg-white/10 border border-white/20 text-white rounded-xl shadow-md hover:bg-white/20 transition cursor-pointer text-sm sm:text-base text-center"
+          >
+            Cek Portofolio
+          </div>
+
           </div>
         </div>
       </div>
       {/* tech stack & partners section */}
-      <div className="mt-8 p-4 flex flex-col gap-10">
-        {/* logo loop */}
-        <h2 className="text-white font-bold md:text-4xl text-xl text-center">
-          Tech Stack & <span className="text-[#4F2CCE]">Partners</span>
-        </h2>
-        <div
-          className="flex flex-col gap-10"
-          style={{ height: "200px", position: "relative", overflow: "hidden" }}
-        >
-          <LogoLoop
-            logos={techLogos}
-            speed={120}
-            direction="left"
-            logoHeight={68}
-            gap={40}
-            pauseOnHover
-            scaleOnHover
-            fadeOut
-            fadeOutColor="#111"
-            ariaLabel="Technology partners"
-          />
-          <LogoLoop
-            className="w-auto h-auto text-white"
-            logos={imageLogos as any}
-            speed={120}
-            direction="right"
-            logoHeight={60}
-            gap={40}
-            pauseOnHover
-            scaleOnHover
-            fadeOut
-            fadeOutColor="#111"
-            ariaLabel="Technology partners"
-          />
-        </div>
-      </div>
+     {/* tech stack & partners section */}
+<div className="mt-8 p-4 flex flex-col gap-10 overflow-hidden">
+  <h2 className="text-white font-bold md:text-4xl text-xl text-center">
+    Tech Stack & <span className="text-[#4F2CCE]">Partners</span>
+  </h2>
+  <div
+    className="flex flex-col gap-10 overflow-hidden"
+    style={{ height: "auto", position: "relative" }}
+  >
+    <LogoLoop
+      logos={techLogos}
+      speed={100}
+      direction="left"
+      logoHeight={50}
+      gap={24}
+      pauseOnHover
+      scaleOnHover
+      fadeOut
+      fadeOutColor="#111"
+      ariaLabel="Technology partners"
+    />
+    <LogoLoop
+      className="text-white"
+      logos={imageLogos as any}
+      speed={100}
+      direction="right"
+      logoHeight={48}
+      gap={24}
+      pauseOnHover
+      scaleOnHover
+      fadeOut
+      fadeOutColor="#111"
+      ariaLabel="Technology partners"
+    />
+  </div>
+</div>
+
       {/* section about me */}
       <div className="p-2">
-        <h2 className="text-white font-bold md:text-4xl text-xl text-start p-8 ml-6 mt-10">
+        <h2 className="text-white font-bold md:text-4xl text-xl text-start md:p-8 p-4 md:ml-6 ml-3 md:mt-10 mt-5">
           About{" "}
           <span className="underline-offset-4 underline decoration-[#4F2CCE] ">
             Freelancer
@@ -178,7 +189,7 @@ const redirectToPortofolio = () => {
       </div>
       {/* feedback client */}
       <div className="p-16 mt-10 mb-10 text-start">
-        <h2 className="text-white font-bold md:text-4xl text-xl">
+        <h2 className="text-white font-bold md:text-4xl text-xl md:p-8 p-4 md:ml-6 ml-3 md:mt-10 mt-5">
           <span className="underline underline-offset-4 decoration-[#4f2cce]">
             Feedback
           </span>{" "}
