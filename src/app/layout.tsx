@@ -12,11 +12,9 @@ const Ramabadrha = Ramabhadra({
 })
 
 export const metadata: Metadata = {
-  title: "Codeverse Studio | Affordable Website Development Services",
-  description: "Jasa pembuatan website: landing page, company profile, ecommerce. Cepat, SEO friendly, Murah, Terjangkau, responsive, dan modern.",
-  icons: {
-    icon: "/logo-jasawebsite.png",
-  },
+  title: "Codeverse Studio | Jasa Pembuatan Website Profesional & Terjangkau",
+  description:
+    "Codeverse Studio menyediakan jasa pembuatan website: landing page, company profile, dan e-commerce. Cepat, SEO-friendly, modern, dan terjangkau untuk bisnis Anda.",
   keywords: [
     "jasa website",
     "jasa pembuatan website",
@@ -24,20 +22,23 @@ export const metadata: Metadata = {
     "jasa company profile",
     "jasa ecommerce",
     "jasa website murah",
-    "jasa website Terjangkau",
+    "Codeverse Studio",
   ],
+  icons: {
+    icon: "/logo-jasawebsite.png",
+  },
   openGraph: {
-    title: "Jasa Pembuatan Website Profesional & user friendly",
+    title: "Codeverse Studio | Jasa Pembuatan Website Profesional",
     description:
-      "Bikin website lebih cepat, modern, dan SEO friendly bersama jasawebsite.dev, Layanan pembuatan landing page, company profile, dan e-commerce.",
-    url: "https://jasawebsite.dev",
-    siteName: "jasawebsite.dev",
+      "Bikin website cepat, modern, dan SEO friendly bersama Codeverse Studio. Layanan pembuatan landing page, company profile, dan e-commerce.",
+    url: "https://codeverse.xyz",
+    siteName: "Codeverse Studio",
     images: [
       {
-        url: "https://jasawebsite.dev/og-jasawebsite.png",
+        url: "https://codeverse.xyz/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Jasa Pembuatan Website Profesional",
+        alt: "Codeverse Studio | Jasa Pembuatan Website Profesional",
       },
     ],
     locale: "id_ID",
@@ -45,12 +46,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jasa Pembuatan Website Profesional & user-friendly",
+    title: "Codeverse Studio | Jasa Pembuatan Website Profesional & Modern",
     description:
-      "Jasa pembuatan website: landing page, company profile, ecommerce. Cepat, SEO friendly, responsive, dan modern.",
-    images: ["https://jasawebsite.dev/og-jasawebsite.png"],
+      "Codeverse Studio menyediakan jasa pembuatan website dan aplikasi profesional untuk bisnis, UMKM, dan startup di seluruh Indonesia.",
+    images: ["https://codeverse.xyz/og-image.jpg"],
   },
 };
+
 
 export default function RootLayout({
   children,
@@ -58,8 +60,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <link rel="icon" href="/yg-icon.png" type="image/png"/>
+    <html lang="id">
+      <link rel="icon" href="/yg-icon.png" type="image/png"/>   
       <body
         className={`${Ramabadrha.className} antialiased bg-black`}
       >
@@ -67,6 +69,27 @@ export default function RootLayout({
         {children}
         <Analytics/>
         <SpeedInsights/>
+         <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      name: "Codeverse Studio",
+      url: "https://codeverse.xyz",
+      description:
+        "Codeverse Studio menyediakan jasa pembuatan website dan aplikasi profesional untuk bisnis, UMKM, dan startup.",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Tangerang",
+        addressCountry: "ID",
+      },
+      sameAs: [
+        "https://www.instagram.com/codeverse_studio.id",
+      ],
+    }),
+  }}
+/>   
       </body>
     </html>
   );

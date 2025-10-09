@@ -19,7 +19,8 @@ const PreviewProject = () => {
       <div className="text-start p-8 ml-6 mb-4 text-white relative">
         <h2 className="text-xl md:text-4xl font-bold w-2xs md:w-3xl ">Sedikit cuplikan Project-Project yang Kami buat untuk para <span className="text-[#4F2CCE]">Client Kami</span></h2>
         <div className="md:mt-16 mt-4">
-          <h5 className="text-white italic font-semibold w-2xs text-xs md:text-xl md:w-2xl">Bussiness Kamu Pengen Punya <span className="text-[#4F2CCE]">Website Profesional</span> Kayak Gini ?? Yok, Konsultasiin Sekarang Biar Bussiness Kamu Growth & Modern.</h5>
+          <h5 className="text-white italic font-semibold w-2xs text-xs md:text-xl md:w-2xl">Kami membantu para Bussiness Owner untuk memiliki website modern, cepat, dan SEO-friendly 
+  agar mudah ditemukan di mesin pencari seperti Google. Bussiness Kamu Pengen Punya <span className="text-[#4F2CCE]">Website Profesional</span> Kayak Gini ?? Yok, Konsultasiin Sekarang Biar Bussiness Kamu Growth & Modern.</h5>
                  <Button
             onClick={redirectToWhatsApp}
             className="bg-[#4F2CCE] flex flex-row gap-2 items-center text-white text-xs sm:text-sm md:text-lg px-4 py-2 rounded-md mt-4 hover:bg-[#3b1fae] transition duration-300"
@@ -45,7 +46,7 @@ const PreviewProject = () => {
             <div className="flex justify-center items-center p-4">
               <Image
                 src="/sneakersco-hero.png"
-                alt="sneakersco"
+                alt="sneakersco platform E-commerce Sneakers sperti Nike, Adidas, Aerostreet, compass"
                 width={428}
                 height={389}
                 className="w-auto h-auto"
@@ -59,7 +60,7 @@ const PreviewProject = () => {
             <div className="flex justify-center items-center p-4">
               <Image
                 src="/the-sneakers-hero.png"
-                alt="sneakersco"
+                alt="Sneakersco Platform E commerce sneakers seperti Nike"
                 width={428}
                 height={389}
                 className="w-auto h-auto"
@@ -75,7 +76,7 @@ const PreviewProject = () => {
             <div className="flex justify-center items-center p-4">
               <Image
                 src="/skytrips-hero.png"
-                alt="sneakersco"
+                alt="Trips bareng Skytrips murah dan terpecaya, Platform Travel seluruh indonesia"
                 width={428}
                 height={389}
                 className="w-auto h-auto"

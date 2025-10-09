@@ -276,13 +276,13 @@ const PriceList = () => {
         <div className="bg-[#111] border-b">
           <div className="max-w-7xl mx-auto px-4 py-4">
             <div className="text-center mb-4">
-              <p className="text-white">
+              <h3 className="text-white">
                 Tertarik dengan{" "}
                 <span className="text-[#4f2cce] text-xl italic font-semibold">
                   Codeverse Studio
                 </span> 
                 {" "} ?
-              </p>
+              </h3>
             </div>
 
             {/* Navigation Tabs */}

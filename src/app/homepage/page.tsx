@@ -3,6 +3,7 @@
 import AboutFreelancer from "@/components/fragments/aboutFreelancer";
 import CtaSection from "@/components/fragments/Ctasection";
 import FeedbackClient from "@/components/fragments/FeedbackClient";
+import GalleryProject from "@/components/fragments/GalleryProject";
 import PreviewProject from "@/components/fragments/PreviewProject";
 import PriceList from "@/components/fragments/PriceList";
 import LiquidEther from "@/components/LiquidEther";
@@ -108,7 +109,7 @@ const redirectToPortofolio = () => {
         {/* Konten Hero */}
         <div className="relative z-10 text-center text-white md:px-4">
           <h1 className="text-2xl ml-10 w-2xs md:w-4xl md:text-5xl text-center font-bold drop-shadow-lg">
-            Jasa Pembuatan Website Profesional & User-Friendly
+            Jasa Pembuatan Website Profesional dan User-Friendly
           </h1>
           <div className="flex flex-row gap-4 md:mt-8 mt-4 justify-center items-center">
   {/* Tombol WhatsApp */}
@@ -135,7 +136,7 @@ const redirectToPortofolio = () => {
      {/* tech stack & partners section */}
 <div className="mt-8 p-4 flex flex-col gap-10 overflow-hidden">
   <h2 className="text-white font-bold md:text-4xl text-xl text-center">
-    Tech Stack & <span className="text-[#4F2CCE]">Partners</span>
+    Tech Stack & <span className="text-[#4F2CCE]">Partners Codeverse Studio</span>
   </h2>
   <div
     className="flex flex-col gap-10 overflow-hidden"
@@ -186,6 +187,15 @@ const redirectToPortofolio = () => {
       {/* Preview Project Client */}
       <div>
         <PreviewProject />
+      </div>
+      {/* gllery project */}
+      <div className="flex flex-col gap-4">
+        <div className="p-4">
+          <h2 className="text-3xl font-bold text-white">Gallery Project</h2>
+        </div>
+         <div>
+           <GalleryProject/>
+         </div>
       </div>
       {/* feedback client */}
       <div className="p-16 mt-10 mb-10 text-start">
