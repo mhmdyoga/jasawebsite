@@ -13,7 +13,7 @@ const landingPageData = [
   {
     id: 1,
     title: "Standart",
-        paket: "landing-page",
+    paket: "landing-page",
     price: "1.200.000",
     benefits: [
       { id: 1, name: "Free Domain (.com) 1 Tahun" },
@@ -249,10 +249,14 @@ const articleBlogData = [
 
 const PriceList = () => {
 
-  const redirectToWhatsApp = (category: string, paket: string) => {
+  const redirectToWhatsApp = (title: string, paket: string) => {
+    window.fbq("track", "Lead", {
+      content_name: title,
+      content_category: paket
+    })
   const phoneNumber = "6285135439654"; // ganti dengan nomor WA lo (format internasional tanpa +)
   const message = encodeURIComponent(
-    `Halo, saya sepertinya tertarik dengan portofolio dan kinerja dari Codeverse Studio,saya tertarik dengan paket: ${category} dengan kategori: ${paket} bisa konsultasi untuk kebutuhan business saya ?`
+    `Halo, saya sepertinya tertarik dengan portofolio dan kinerja dari Codeverse Studio,saya tertarik dengan paket: ${title} dengan kategori: ${paket} bisa konsultasi untuk kebutuhan business saya ?`
   );
   window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
 };
@@ -277,24 +281,28 @@ const PriceList = () => {
             <Tabs defaultValue="company-profile" className="w-full">
               <TabsList className="grid w-auto h-auto gap-6 grid-cols-2 md:grid-cols-4 bg-[#111]">
                 <TabsTrigger
+                id="Landing-page-pricelist"
                   value="landing-page"
                   className="text-sm text-[#4f2cce] w-auto h-auto p-2 font-semibold"
                 >
                   Landing Page
                 </TabsTrigger>
                 <TabsTrigger
+                id="company-profile-pricelist"
                   value="company-profile"
                   className="text-sm text-[#4f2cce] font-semibold"
                 >
                   Company Profile
                 </TabsTrigger>
                 <TabsTrigger
+                id="bussiness-platform-pricelist"
                   value="bussiness-platform"
                   className="text-sm text-[#4f2cce]  font-semibold"
                 >
                   Bussiness Platform
                 </TabsTrigger>
                 <TabsTrigger
+                  id="artikel-blog-pricelist"
                   value="artikel-blog"
                   className="text-sm text-[#4f2cce]  font-semibold"
                 >
@@ -325,7 +333,7 @@ const PriceList = () => {
                         ))}
                         </ul>
                       </CardContent>
-                      <Button onClick={() => redirectToWhatsApp(data.paket, data.title) } className={data.title === "Premium" ? "bg-white text-[#4f2cce] font-semibold p-2 w-full max-w-52 h-auto rounded-2xl ml-8 flex flex-row gap-2 items-center justify-center" : "bg-[#4f2cce] font-semibold p-2 w-full max-w-52 h-auto rounded-2xl ml-8 text-white flex flex-row gap-2 items-center justify-center"}><BsWhatsapp/> Order Sekarang</Button>
+                      <Button id="btn-whatsaap-landing-page-pricelist" onClick={() => redirectToWhatsApp(data.title, data.paket) } className={data.title === "Premium" ? "bg-white text-[#4f2cce] font-semibold p-2 w-full max-w-52 h-auto rounded-2xl ml-8 flex flex-row gap-2 items-center justify-center" : "bg-[#4f2cce] font-semibold p-2 w-full max-w-52 h-auto rounded-2xl ml-8 text-white flex flex-row gap-2 items-center justify-center"}><BsWhatsapp/> Order Sekarang</Button>
                     </Card>
                       </div>
                     ))}
@@ -357,7 +365,7 @@ const PriceList = () => {
                         ))}
                         </ul>
                       </CardContent>
-                      <Button onClick={() => redirectToWhatsApp(data.paket, data.title) } className={data.title === "Premium" ? "bg-white text-[#4f2cce] font-semibold p-2 w-full max-w-52 h-auto rounded-2xl ml-8 flex flex-row gap-2 items-center justify-center" : "bg-[#4f2cce] font-semibold p-2 w-full max-w-52 h-auto rounded-2xl ml-8 text-white flex flex-row gap-2 items-center justify-center"}><BsWhatsapp/> Order Sekarang</Button>
+                      <Button id="btn-whatsaap-company-profile-pricelist" onClick={() => redirectToWhatsApp(data.title, data.paket) } className={data.title === "Premium" ? "bg-white text-[#4f2cce] font-semibold p-2 w-full max-w-52 h-auto rounded-2xl ml-8 flex flex-row gap-2 items-center justify-center" : "bg-[#4f2cce] font-semibold p-2 w-full max-w-52 h-auto rounded-2xl ml-8 text-white flex flex-row gap-2 items-center justify-center"}><BsWhatsapp/> Order Sekarang</Button>
                     </Card>
                       </div>
                     ))}
@@ -391,7 +399,7 @@ const PriceList = () => {
                         ))}
                         </ul>
                       </CardContent>
-                       <Button onClick={() => redirectToWhatsApp(data.paket, data.title) } className={data.title === "Premium" ? "bg-white text-[#4f2cce] font-semibold p-2 w-full max-w-52 h-auto rounded-2xl ml-8 flex flex-row gap-2 items-center justify-center" : "bg-[#4f2cce] font-semibold p-2 w-full max-w-52 h-auto rounded-2xl ml-8 text-white flex flex-row gap-2 items-center justify-center"}><BsWhatsapp/> Order Sekarang</Button>
+                       <Button id="btn-whatsaap-bussiness-platform-pricelist" onClick={() => redirectToWhatsApp(data.title, data.paket) } className={data.title === "Premium" ? "bg-white text-[#4f2cce] font-semibold p-2 w-full max-w-52 h-auto rounded-2xl ml-8 flex flex-row gap-2 items-center justify-center" : "bg-[#4f2cce] font-semibold p-2 w-full max-w-52 h-auto rounded-2xl ml-8 text-white flex flex-row gap-2 items-center justify-center"}><BsWhatsapp/> Order Sekarang</Button>
                     </Card>
                       </div>
                     ))}
@@ -424,7 +432,7 @@ const PriceList = () => {
                         ))}
                         </ul>
                       </CardContent>
-                      <Button onClick={() => redirectToWhatsApp(data.paket, data.title) } className={data.title === "Premium" ? "bg-white text-[#4f2cce] font-semibold p-2 w-full max-w-52 h-auto rounded-2xl ml-8 flex flex-row gap-2 items-center justify-center" : "bg-[#4f2cce] font-semibold p-2 w-full max-w-52 h-auto rounded-2xl ml-8 text-white flex flex-row gap-2 items-center justify-center"}><BsWhatsapp/> Order Sekarang</Button>
+                      <Button id="btn-whatsaap-artikel-blog-pricelist" onClick={() => redirectToWhatsApp(data.title, data.paket) } className={data.title === "Premium" ? "bg-white text-[#4f2cce] font-semibold p-2 w-full max-w-52 h-auto rounded-2xl ml-8 flex flex-row gap-2 items-center justify-center" : "bg-[#4f2cce] font-semibold p-2 w-full max-w-52 h-auto rounded-2xl ml-8 text-white flex flex-row gap-2 items-center justify-center"}><BsWhatsapp/> Order Sekarang</Button>
                     </Card>
                       </div>
                     ))}

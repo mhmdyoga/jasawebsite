@@ -71,6 +71,11 @@ const imageLogos = [
 const Homepage = () => {
   
   const redirectToWhatsApp = () => {
+
+    window.fbq("track", "Lead", {
+      content_name: "Consultasi-hero-page"
+    })
+
   const phoneNumber = "6285135439654"; // ganti dengan nomor WA lo (format internasional tanpa +)
   const message = encodeURIComponent(
     "Halo, saya sepertinya tertarik dengan portofolio dan kinerja dari Codeverse Studio, bisa konsultasi untuk kebutuhan business saya ?"
@@ -79,6 +84,9 @@ const Homepage = () => {
 };
 
 const redirectToPortofolio = () => {
+  window.fbq("track", "Lead", {
+    content_name: "visit-portofolio-freelancer"
+  })
   window.open('https://mhmdyoga.vercel.app/projects')
 }
 
@@ -114,6 +122,7 @@ const redirectToPortofolio = () => {
           <div className="flex flex-row gap-4 md:mt-8 mt-4 justify-center items-center">
   {/* Tombol WhatsApp */}
           <button
+            id="btn-to-whatsaap"
             onClick={redirectToWhatsApp}
             className="w-full sm:w-auto px-5 sm:px-6 py-3 flex flex-row items-center justify-center gap-2 sm:gap-3 bg-white text-black rounded-xl shadow-md hover:bg-gray-200 transition text-sm sm:text-base"
           >
@@ -123,6 +132,7 @@ const redirectToPortofolio = () => {
 
           {/* Tombol Portofolio */}
           <div
+            id="view-portofolio"
             onClick={redirectToPortofolio}
             className="w-full sm:w-auto px-5 sm:px-6 py-3 bg-white/10 border border-white/20 text-white rounded-xl shadow-md hover:bg-white/20 transition cursor-pointer text-sm sm:text-base text-center"
           >

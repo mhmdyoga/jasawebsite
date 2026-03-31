@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/ui/navbar";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import Image from "next/image";
+import PixelProvider from "@/providers/Providers";
 
 const Ramabadrha = Ramabhadra({
   weight: "400",
@@ -65,6 +67,7 @@ export default function RootLayout({
       <body
         className={`${Ramabadrha.className} antialiased bg-black`}
       >
+        <PixelProvider/>
         <Navbar/>
         {children}
         <Analytics/>
@@ -90,6 +93,16 @@ export default function RootLayout({
     }),
   }}
 />   
+
+<noscript>
+  <Image 
+    height={1}
+    width={1}
+    style={{ display: 'none' }}
+    src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID}&ev=PageView&noscript=1`}
+    alt=""
+  />
+</noscript>
       </body>
     </html>
   );

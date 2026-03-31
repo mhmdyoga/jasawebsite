@@ -7,6 +7,9 @@ import { Button } from "../ui/button";
 const PreviewProject = () => {
 
   const redirectToWhatsApp = () => {
+    window.fbq("track", "Lead", {
+      content_name: "Consultasi"
+    })
   const phoneNumber = "6285135439654"; // ganti dengan nomor WA lo (format internasional tanpa +)
   const message = encodeURIComponent(
     "Halo, saya sepertinya tertarik dengan portofolio dan kinerja dari Codeverse Studio, bisa konsultasi untuk kebutuhan business saya ?"
@@ -22,6 +25,7 @@ const PreviewProject = () => {
           <h5 className="text-white italic font-semibold w-2xs text-xs md:text-xl md:w-2xl">Kami membantu para Bussiness Owner untuk memiliki website modern, cepat, dan SEO-friendly 
   agar mudah ditemukan di mesin pencari seperti Google. Bussiness Kamu Pengen Punya <span className="text-[#4F2CCE]">Website Profesional</span> Kayak Gini ?? Yok, Konsultasiin Sekarang Biar Bussiness Kamu Growth & Modern.</h5>
                  <Button
+                 id="btn-whatsaap-preview-project"
             onClick={redirectToWhatsApp}
             className="bg-[#4F2CCE] flex flex-row gap-2 items-center text-white text-xs sm:text-sm md:text-lg px-4 py-2 rounded-md mt-4 hover:bg-[#3b1fae] transition duration-300"
           >
