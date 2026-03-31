@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import Image from "next/image";
 import PixelProvider from "@/providers/Providers";
+import { Suspense } from "react";
 
 const Ramabadrha = Ramabhadra({
   weight: "400",
@@ -67,11 +68,14 @@ export default function RootLayout({
       <body
         className={`${Ramabadrha.className} antialiased bg-black`}
       >
+        <Suspense>
         <PixelProvider/>
         <Navbar/>
         {children}
         <Analytics/>
-        <SpeedInsights/>
+        <SpeedInsights/> 
+        </Suspense>
+       
          <script
   type="application/ld+json"
   dangerouslySetInnerHTML={{
