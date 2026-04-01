@@ -3,12 +3,13 @@ import CardSwap, { Card } from "../CardSwap";
 import Image from "next/image";
 import { BsWhatsapp } from "react-icons/bs";
 import { Button } from "../ui/button";
-
+import * as fbq from "@/lib/fpixel"
 const PreviewProject = () => {
 
   const redirectToWhatsApp = () => {
-    window.fbq("track", "Lead", {
-      content_name: "Consultasi"
+    fbq.event('Lead', {
+      content_name: "whatsaap_direct",
+      content_category: "CTA"
     })
   const phoneNumber = "6285135439654"; // ganti dengan nomor WA lo (format internasional tanpa +)
   const message = encodeURIComponent(

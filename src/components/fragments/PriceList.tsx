@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { BsWhatsapp } from "react-icons/bs";
 import { Button } from "../ui/button";
+import * as fbq from "@/lib/fpixel"
 
 const landingPageData = [
   {
@@ -248,12 +249,12 @@ const articleBlogData = [
 
 
 const PriceList = () => {
-
+  fbq.event('Lead', {
+    content_name: "Whatsaap_click",
+    content_category: "Choose_packet_category"
+  })
   const redirectToWhatsApp = (title: string, paket: string) => {
-    window.fbq("track", "Lead", {
-      content_name: title,
-      content_category: paket
-    })
+    
   const phoneNumber = "6285135439654"; // ganti dengan nomor WA lo (format internasional tanpa +)
   const message = encodeURIComponent(
     `Halo, saya sepertinya tertarik dengan portofolio dan kinerja dari Codeverse Studio,saya tertarik dengan paket: ${title} dengan kategori: ${paket} bisa konsultasi untuk kebutuhan business saya ?`

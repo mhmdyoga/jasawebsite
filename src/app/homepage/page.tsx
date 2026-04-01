@@ -18,6 +18,7 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
+import * as fbq from "@/lib/fpixel"
 
 const techLogos = [
   {
@@ -72,9 +73,7 @@ const Homepage = () => {
   
   const redirectToWhatsApp = () => {
 
-    window.fbq("track", "Lead", {
-      content_name: "Consultasi-hero-page"
-    })
+    fbq.pageview()
 
   const phoneNumber = "6285135439654"; // ganti dengan nomor WA lo (format internasional tanpa +)
   const message = encodeURIComponent(
