@@ -18,7 +18,6 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
-import * as fbq from "@/lib/fpixel"
 
 const techLogos = [
   {
@@ -73,7 +72,10 @@ const Homepage = () => {
   
   const redirectToWhatsApp = () => {
 
-    fbq.pageview()
+    window.fbq('track', 'Lead', {
+      content_name: "PageView",
+      content_category: "CTA"
+    })
 
   const phoneNumber = "6285135439654"; // ganti dengan nomor WA lo (format internasional tanpa +)
   const message = encodeURIComponent(
@@ -84,7 +86,8 @@ const Homepage = () => {
 
 const redirectToPortofolio = () => {
   window.fbq("track", "Lead", {
-    content_name: "visit-portofolio-freelancer"
+    content_name: "visit-portofolio-freelancer",
+    content_category: "Visit portofolio"
   })
   window.open('https://mhmdyoga.vercel.app/projects')
 }

@@ -7,8 +7,8 @@ import * as fbq from "@/lib/fpixel"
 const PreviewProject = () => {
 
   const redirectToWhatsApp = () => {
-    fbq.event('Lead', {
-      content_name: "whatsaap_direct",
+    window.fbq('track', 'Lead', {
+      content_name: "Lead",
       content_category: "CTA"
     })
   const phoneNumber = "6285135439654"; // ganti dengan nomor WA lo (format internasional tanpa +)
